@@ -45,5 +45,10 @@ public class InputSteps {
   public void firstnameInput(String firstname) {
     loginPage.firstnameInput(firstname);
   }
+
+  @And("^User write: (.+) to lastname input")
+  public void lastnameInput(String lastname) {
+    loginPage.lastnameInput(lastname);
+  }
 }
 

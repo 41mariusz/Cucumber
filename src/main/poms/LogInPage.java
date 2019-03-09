@@ -91,4 +91,8 @@ public class LogInPage extends BasePage {
     firstnameInput.sendKeys(fistname);
   }
 
+  public void lastnameInput(String lastname) {
+    lastnameInput.sendKeys(lastname);
+  }
+
 }

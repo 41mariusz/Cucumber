@@ -10,3 +10,4 @@ Feature: Register test suite
         When User write: dsadasdsa@o2.pl to create new accountn
         And Click in Create an account
         And User write: Janusz to firstname input
+        And User write: Kowalski to lastname input
