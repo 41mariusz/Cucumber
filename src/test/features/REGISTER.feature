@@ -9,3 +9,4 @@ Feature: Register test suite
         Try login with correct email and password
         When User write: dsadasdsa@o2.pl to create new accountn
         And Click in Create an account
+        And User write: Janusz to firstname input

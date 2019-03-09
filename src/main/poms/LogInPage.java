@@ -87,4 +87,8 @@ public class LogInPage extends BasePage {
     submitRegisterBtn.click();
   }
 
+  public void firstnameInput(String fistname) {
+    firstnameInput.sendKeys(fistname);
+  }
+
 }

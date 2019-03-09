@@ -40,5 +40,10 @@ public class InputSteps {
   public void clickInCreateAnAccount() {
     loginPage.submitRegisterBtn();
   }
+
+  @And("^User write: (.+) to firstname input")
+  public void firstnameInput(String firstname) {
+    loginPage.firstnameInput(firstname);
+  }
 }
 
