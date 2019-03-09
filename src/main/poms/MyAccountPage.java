@@ -5,19 +5,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class MyAccountPage extends BasePage {
-    public MyAccountPage() {
-        super();
-    }
+  public MyAccountPage() {
+    super();
+  }
 
-    @FindBy (xpath = "//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a")
-    private WebElement logoutBtn;
+  @FindBy(xpath = "//*[@id=\"header\"]/div[2]/div/div/nav/div[2]/a")
+  private WebElement logoutBtn;
+
+  @FindBy(css = "div#center_column div.alert.alert-danger")
+  private WebElement errorBox;
 
 
-    public void logout(){
-        logoutBtn.click();
-    }
+  public void logout() {
+    logoutBtn.click();
+  }
 
-    public WebElement returnBtn() {
-        return logoutBtn;
-    }
+  public WebElement returnBtn() {
+    return logoutBtn;
+  }
+
+  public WebElement returnErrorBox() {
+    return errorBox;
+  }
 }

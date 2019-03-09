@@ -5,22 +5,30 @@ import cucumber.api.java.en.When;
 import main.poms.LogInPage;
 import main.utils.MainPage;
 
-import java.util.List;
-
 public class InputSteps {
 
-    private LogInPage loginPage = new LogInPage();
-    private MainPage mainPage = new MainPage();
+  private LogInPage loginPage = new LogInPage();
+  private MainPage mainPage = new MainPage();
 
 
-    @When("^User sign in using login: (.+) and password: (.+)")
-    public void signIn(String login, String password) {
-        loginPage.logIn(login, password);
-    }
+  @When("^User write: (.+) to login input")
+  public void inputLogin(String login) {
+    loginPage.inputLogin(login);
+  }
 
-    @And("^Click in SignIn$")
-    public void clickInSignIn() {
-        mainPage.signInBtn();
-    }
+  @When("^User write: (.+) to password input")
+  public void inputPassword(String password) {
+    loginPage.inputPassword(password);
+  }
+
+  @When("^User click: submit button")
+  public void submitBtn() {
+    loginPage.submitBtn();
+  }
+
+  @And("^Click in SignIn$")
+  public void clickInSignIn() {
+    mainPage.signInBtn();
+  }
 }
 
