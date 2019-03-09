@@ -30,5 +30,15 @@ public class InputSteps {
   public void clickInSignIn() {
     mainPage.signInBtn();
   }
+
+  @When("^User write: (.+) to create new account")
+  public void inputCreateLogin(String login) {
+    loginPage.inputCreateLogin(login);
+  }
+
+  @And("^Click in Create an account$")
+  public void clickInCreateAnAccount() {
+    loginPage.submitRegisterBtn();
+  }
 }
 

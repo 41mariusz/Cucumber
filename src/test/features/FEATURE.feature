@@ -1,5 +1,4 @@
-@test
-Feature: test
+Feature: Login test suite
 
   Background: Preconditions
     Given Open http://automationpractice.com/ page
@@ -43,7 +42,7 @@ Feature: test
         When User write: bad_pass to password input
         And User click: submit button
         Then Check error box contain An email address required
-@dev
+
    Scenario: TC.07 - Login with invalid username and valid password # Logowanie z niepoprawnym loginem (walidacja) i poprawnym hasłem
         Try login with correct email and incorrect password
         When User write: fdfd11sfsd to login input
