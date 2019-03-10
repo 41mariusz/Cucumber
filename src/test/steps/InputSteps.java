@@ -3,12 +3,14 @@ package test.steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 import main.poms.LogInPage;
+import main.poms.RegisterPage;
 import main.utils.MainPage;
 
 public class InputSteps {
 
   private LogInPage loginPage = new LogInPage();
   private MainPage mainPage = new MainPage();
+  private RegisterPage registerPage = new RegisterPage();
 
 
   @When("^User write: (.+) to login input")
@@ -43,12 +45,17 @@ public class InputSteps {
 
   @And("^User write: (.+) to firstname input")
   public void firstnameInput(String firstname) {
-    loginPage.firstnameInput(firstname);
+    registerPage.firstnameInput(firstname);
   }
 
   @And("^User write: (.+) to lastname input")
   public void lastnameInput(String lastname) {
-    loginPage.lastnameInput(lastname);
+    registerPage.lastnameInput(lastname);
+  }
+
+  @And("^User write: (.+) to password input register")
+  public void passwordRegisterInput(String password) {
+    registerPage.passwordRegisterInput(password);
   }
 }
 

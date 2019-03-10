@@ -11,3 +11,4 @@ Feature: Register test suite
         And Click in Create an account
         And User write: Janusz to firstname input
         And User write: Kowalski to lastname input
+        And User write: haslo123 to password input register
