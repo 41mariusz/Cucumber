@@ -131,18 +131,15 @@ public class RegisterPage extends BasePage {
   }
 
   public void dayOfBirthSelect(String day) {
-    Select days = new Select(dayOfBirthSelect);
-    days.selectByValue(day);
+    new Select(dayOfBirthSelect).selectByValue(day);
   }
 
   public void monthOfBirthSelect(String month) {
-    Select months = new Select(monthOfBirthSelect);
-    months.selectByValue(month);
+    new Select(monthOfBirthSelect).selectByValue(month);
   }
 
   public void yearOfBirthSelect(String year) {
-    Select years = new Select(yearOfBirthSelect);
-    years.selectByValue(year);
+    new Select(yearOfBirthSelect).selectByValue(year);
   }
 
   public void stateSelect(String state) {

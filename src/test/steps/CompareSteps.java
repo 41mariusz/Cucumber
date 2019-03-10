@@ -16,4 +16,9 @@ public class CompareSteps {
   public void checkErrorBox(String msg) {
     Assert.assertTrue(myAccPage.returnErrorBox().getText().contains(msg));
   }
+
+  @Then("^Check mini error box contain (.+)")
+  public void checkMiniErrorBox(String msg) {
+    Assert.assertTrue(myAccPage.returnMiniErrorBox().getText().contains(msg));
+  }
 }

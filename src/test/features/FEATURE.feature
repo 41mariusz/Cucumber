@@ -3,7 +3,7 @@ Feature: Login test suite
 
   Background: Preconditions
     Given Open http://automationpractice.com/ page
-    And Click in SignIn
+    And User click: in SignIn
 
   Scenario: TC.01 - Login with valid username and password # Logowanie poprawne
         Try login with correct email and password
@@ -25,7 +25,6 @@ Feature: Login test suite
         When User write: P@ssw0rd to password input
         And User click: submit button
         Then Check error box contain Authentication failed
-
 
    Scenario: TC.04 - Login with valid username and empty password # Logowanie z poprawnym loginem i pustym hasłem
         Try login with correct email and incorrect password

@@ -15,6 +15,9 @@ public class MyAccountPage extends BasePage {
   @FindBy(css = "div#center_column div.alert.alert-danger")
   private WebElement errorBox;
 
+  @FindBy(css = "div#create_account_error ol li")
+  private WebElement miniErrorBox;
+
 
   public void logout() {
     logoutBtn.click();
@@ -26,5 +29,9 @@ public class MyAccountPage extends BasePage {
 
   public WebElement returnErrorBox() {
     return errorBox;
+  }
+
+  public WebElement returnMiniErrorBox() {
+    return miniErrorBox;
   }
 }
