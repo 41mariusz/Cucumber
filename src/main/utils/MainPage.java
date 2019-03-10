@@ -11,7 +11,7 @@ public class MainPage extends BasePage {
     @FindBy(className = "login")
     private static WebElement SignInBtn;
 
-    public static void signInBtn(){
+    public void signInBtn(){
         SignInBtn.click();
     }
 }

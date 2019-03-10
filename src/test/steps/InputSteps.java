@@ -53,9 +53,64 @@ public class InputSteps {
     registerPage.lastnameInput(lastname);
   }
 
-  @And("^User write: (.+) to password input register")
+  @And("^User write: (.+) to passwd input")
   public void passwordRegisterInput(String password) {
     registerPage.passwordRegisterInput(password);
+  }
+
+  @And("^User write: (.+) to firstname adress input")
+  public void fistnameAdressInput(String firstname) {
+    registerPage.fistnameAdressInput(firstname);
+  }
+
+  @And("^User write: (.+) to lastname adress input")
+  public void lastnameAdressInput(String lastname) {
+    registerPage.lastnameAdressInput(lastname);
+  }
+
+  @And("^User write: (.+) to company input")
+  public void companyInput(String company) {
+    registerPage.companyInput(company);
+  }
+
+  @And("^User write: (.+) to adress1 input")
+  public void adress1Input(String adress) {
+    registerPage.adress1Input(adress);
+  }
+
+  @And("^User write: (.+) to adress2 input")
+  public void adress2Input(String adress) {
+    registerPage.adress2Input(adress);
+  }
+
+  @And("^User write: (.+) to city input")
+  public void cityInput(String city) {
+    registerPage.cityInput(city);
+  }
+
+  @And("^User write: (.+) to postcode input")
+  public void postcodeInput(String postcode) {
+    registerPage.postcodeInput(postcode);
+  }
+
+  @And("^User write: (.+) to additional info input")
+  public void additionalInfoInput(String info) {
+    registerPage.additionalInfoInput(info);
+  }
+
+  @And("^User write: (.+) to home phone input")
+  public void homePhoneInput(String phone) {
+    registerPage.homePhoneInput(phone);
+  }
+
+  @And("^User write: (.+) to mobile phone input")
+  public void mobilePhoneInput(String phone) {
+    registerPage.mobilePhoneInput(phone);
+  }
+
+  @And("^User write: (.+) to alias input")
+  public void aliasInput(String alias) {
+    registerPage.aliasInput(alias);
   }
 }
 
