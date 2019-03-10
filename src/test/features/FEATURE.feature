@@ -12,7 +12,7 @@ Feature: Login test suite
         And User click: submit button
         Then Check if you are logged in
 
-  Scenario: TC.02 - Login with incorrect username and password # Logowanie z poprawnym loginem i niepoprawnym hasłem
+  Scenario: TC.02 - Login with valid username and incorrect password # Logowanie z poprawnym loginem i niepoprawnym hasłem
         Try login with correct email and incorrect password
         When User write: 41mariusz@mail.com to login input
         When User write: bad_pass to password input
