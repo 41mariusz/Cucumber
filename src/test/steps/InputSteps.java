@@ -112,5 +112,8 @@ public class InputSteps {
   public void aliasInput(String alias) {
     registerPage.aliasInput(alias);
   }
+
+  @And("^User click: submit register button")
+  public void submitRegisterBtn() {registerPage.submitBtn();}
 }
 

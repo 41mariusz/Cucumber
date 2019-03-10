@@ -18,8 +18,9 @@ Feature: Register test suite
         And User write: Adres1 to adress1 input
         And User write: Adres2 to adress2 input
         And User write: Warszawa to city input
-        And User write: 01-110 to postcode input
+        And User write: 01110 to postcode input
         And User write: Hello to additional info input
         And User write: 864943 to home phone input
         And User write: 500500500 to mobile phone input
         And User write: hehe to alias input
+        Then User click: submit register button

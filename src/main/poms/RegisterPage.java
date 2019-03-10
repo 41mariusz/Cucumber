@@ -51,6 +51,9 @@ public class RegisterPage extends BasePage {
   @FindBy(id = "alias")
   private WebElement aliasInput;
 
+  @FindBy(id = "submitAccount")
+  private WebElement submitBtn;
+
   public void firstnameInput(String fistname) {
     firstnameInput.sendKeys(fistname);
   }
@@ -106,6 +109,10 @@ public class RegisterPage extends BasePage {
   public void aliasInput(String alias) {
     aliasInput.clear();
     aliasInput.sendKeys(alias);
+  }
+
+  public void submitBtn() {
+    submitBtn.click();
   }
 
 }
