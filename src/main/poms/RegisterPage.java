@@ -3,6 +3,7 @@ package main.poms;
 import main.utils.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 public class RegisterPage extends BasePage {
   public RegisterPage() {
@@ -54,6 +55,18 @@ public class RegisterPage extends BasePage {
   @FindBy(id = "submitAccount")
   private WebElement submitBtn;
 
+  @FindBy(id = "days")
+  private WebElement dayOfBirthSelect;
+
+  @FindBy(id = "months")
+  private WebElement monthOfBirthSelect;
+
+  @FindBy(id = "years")
+  private WebElement yearOfBirthSelect;
+
+  @FindBy(id = "id_state")
+  private WebElement stateSelect;
+
   public void firstnameInput(String fistname) {
     firstnameInput.sendKeys(fistname);
   }
@@ -67,10 +80,12 @@ public class RegisterPage extends BasePage {
   }
 
   public void fistnameAdressInput(String fistnameAdress) {
+    firstnameAdressInput.clear();
     firstnameAdressInput.sendKeys(fistnameAdress);
   }
 
   public void lastnameAdressInput(String lastnameAdress) {
+    lastnameAdressInput.clear();
     lastnameAdressInput.sendKeys(lastnameAdress);
   }
 
@@ -113,6 +128,26 @@ public class RegisterPage extends BasePage {
 
   public void submitBtn() {
     submitBtn.click();
+  }
+
+  public void dayOfBirthSelect(String day) {
+    Select days = new Select(dayOfBirthSelect);
+    days.selectByValue(day);
+  }
+
+  public void monthOfBirthSelect(String month) {
+    Select months = new Select(monthOfBirthSelect);
+    months.selectByValue(month);
+  }
+
+  public void yearOfBirthSelect(String year) {
+    Select years = new Select(yearOfBirthSelect);
+    years.selectByValue(year);
+  }
+
+  public void stateSelect(String state) {
+    Select states = new Select(stateSelect);
+    states.selectByVisibleText(state);
   }
 
 }

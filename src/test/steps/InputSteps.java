@@ -114,6 +114,28 @@ public class InputSteps {
   }
 
   @And("^User click: submit register button")
-  public void submitRegisterBtn() {registerPage.submitBtn();}
+  public void submitRegisterBtn() {
+    registerPage.submitBtn();
+  }
+
+  @And("^User select: (.+) day of birth") // TODO
+  public void dayOfBirthSelect(String day) {
+    registerPage.dayOfBirthSelect(day);
+  }
+
+  @And("^User select: (.+) month of birth") // TODO
+  public void monthOfBirthSelect(String month) {
+    registerPage.monthOfBirthSelect(month);
+  }
+
+  @And("^User select: (.+) year of birth") // TODO
+  public void yearOfBirthSelect(String year) {
+    registerPage.yearOfBirthSelect(year);
+  }
+
+  @And("^User select: (.+) state")
+  public void stateSelect(String state) {
+    registerPage.stateSelect(state);
+  }
 }
 
